@@ -1,13 +1,13 @@
 use std::{io::Error, net::TcpListener};
-use zero2prod::run;
-
-const ADDRESS: &str = "127.0.0.1";
-const PORT: u16 = 8000;
+use zero2prod::{configuration::get_configuration, run};
 
 #[tokio::main]
 pub async fn main() -> Result<(), Error> {
-    let address = format!("{}:{}", ADDRESS, PORT);
-    let listener = TcpListener::bind(address).expect("Cannot bind to 8000 listener");
+    let configuration = get_configuration().expect("Failed to read configuration");
+    let port = configuration.application_port;
+
+    let address = format!("{}:{}", configuration.application_address, port);
+    let listener = TcpListener::bind(address).expect("Cannot bind to listener");
     let _ = run(listener)?.await;
     Ok(())
 }
