@@ -1,3 +1,15 @@
 {
-  "cSpell.words": ["reqwest"]
+  "cSpell.words": ["reqwest"],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "newsletters",
+      "database": "newsletter",
+      "username": "postgres",
+      "password": "password"
+    }
+  ]
 }

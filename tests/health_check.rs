@@ -1,5 +1,4 @@
 use std::net::TcpListener;
-
 use reqwest::Client;
 
 fn spawn_app() -> String {
