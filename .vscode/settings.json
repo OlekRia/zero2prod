@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["chrono", "reqwest", "sqlx"],
+  "cSpell.words": ["chrono", "dbname", "reqwest", "sqlx", "Zwei"],
   "sqltools.connections": [
     {
       "previewLimit": 50,
